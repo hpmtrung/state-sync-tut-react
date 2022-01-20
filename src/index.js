@@ -16,7 +16,8 @@ function toFahrenheit(celcius) {
 
 function tryConvert(temperature, convertMethod) {
 	const input = parseFloat(temperature);
-	if (!(input && isFinite(input))) return;
+	if (!(input && isFinite(input)))
+		return '';
 	const output = convertMethod(input);
 	const rounded = Math.round(output * 1000) / 1000;
 	return rounded.toString();
